@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.cn</groupId>
+    <artifactId>power-shop</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>cloud-iass</module>
+        <module>power-common</module>
+        <module>power-manager</module>
+        <module>power-product</module>
+        <module>power-store</module>
+        <module>power-number</module>
+        <module>power-search</module>
+        <module>power-cart</module>
+        <module>power-order</module>
+
+
+    </modules>
+    <packaging>pom</packaging>
+    <!--继承springboot父工程 === 目的是控制整个项目中SpringBoot的依赖版本-->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.12.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <!--声明版本号-->
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Hoxton.SR12</spring-cloud.version>
+        <spring-boot-admin.version>2.3.0</spring-boot-admin.version>
+        <mybatis-plus.version>3.4.0</mybatis-plus.version>
+        <swagger.version>3.0.0</swagger.version>
+        <hutool.version>5.3.9</hutool.version>
+        <fastDFS.version>1.27.2</fastDFS.version>
+        <fastJson.version>1.2.73</fastJson.version>
+    </properties>
+
+
+
+    <!--为所有子工程提供的公共依赖-->
+<dependencies>
+<!--lombok-->
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>1.18.20</version>
+    </dependency>
+    <!--mybatis-plus注释-->
+    <dependency>
+        <groupId>com.baomidou</groupId>
+        <artifactId>mybatis-plus-annotation</artifactId>
+        <version>${mybatis-plus.version}</version>
+    </dependency>
+    <!--hutool工具包-->
+    <dependency>
+        <groupId>cn.hutool</groupId>
+        <artifactId>hutool-all</artifactId>
+        <version>${hutool.version}</version>
+    </dependency>
+    <!--fastjson-->
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>${fastJson.version}</version>
+    </dependency>
+</dependencies>
+
+    <!--依赖版本控制-->
+    <dependencyManagement>
+        <dependencies>
+            <!--springcloud-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--springadmin-->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-dependencies</artifactId>
+                <version>${spring-boot-admin.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--mybatis-plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!--fastdfs-->
+            <dependency>
+                <groupId>com.github.tobato</groupId>
+                <artifactId>fastdfs-client</artifactId>
+                <version>${fastDFS.version}</version>
+            </dependency>
+            <!--swagger-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

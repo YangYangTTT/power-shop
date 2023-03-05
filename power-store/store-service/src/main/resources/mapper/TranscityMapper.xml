@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pn.dao.TranscityMapper">
+  <resultMap id="BaseResultMap" type="com.pn.entily.Transcity">
+    <!--@mbg.generated-->
+    <!--@Table transcity-->
+    <id column="transcity_id" jdbcType="BIGINT" property="transcityId" />
+    <result column="transfee_id" jdbcType="BIGINT" property="transfeeId" />
+    <result column="city_id" jdbcType="BIGINT" property="cityId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    transcity_id, transfee_id, city_id
+  </sql>
+</mapper>

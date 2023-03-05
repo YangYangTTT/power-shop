@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pn.dao.OrderSettlementMapper">
+  <resultMap id="BaseResultMap" type="com.pn.entily.OrderSettlement">
+    <!--@mbg.generated-->
+    <!--@Table order_settlement-->
+    <id column="settlement_id" jdbcType="BIGINT" property="settlementId" />
+    <result column="pay_no" jdbcType="VARCHAR" property="payNo" />
+    <result column="biz_pay_no" jdbcType="VARCHAR" property="bizPayNo" />
+    <result column="order_number" jdbcType="VARCHAR" property="orderNumber" />
+    <result column="pay_type" jdbcType="INTEGER" property="payType" />
+    <result column="pay_type_name" jdbcType="VARCHAR" property="payTypeName" />
+    <result column="pay_amount" jdbcType="DECIMAL" property="payAmount" />
+    <result column="is_clearing" jdbcType="INTEGER" property="isClearing" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="clearing_time" jdbcType="TIMESTAMP" property="clearingTime" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+    <result column="pay_status" jdbcType="INTEGER" property="payStatus" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    settlement_id, pay_no, biz_pay_no, order_number, pay_type, pay_type_name, pay_amount, 
+    is_clearing, user_id, create_time, clearing_time, version, pay_status
+  </sql>
+</mapper>

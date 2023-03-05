@@ -1,0 +1,9 @@
+com\pn\dao\SysLoginUserMapper.class
+com\pn\entily\WxUser.class
+com\pn\authserverApplication.class
+com\pn\config\AuthConstant.class
+com\pn\service\MyUserDetailsService.class
+com\pn\config\SecurityConfig.class
+com\pn\dao\WxUserMapper.class
+com\pn\entily\User.class
+com\pn\config\AuthConfig.class

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pn.dao.PickAddrMapper">
+  <resultMap id="BaseResultMap" type="com.pn.entily.PickAddr">
+    <!--@mbg.generated-->
+    <!--@Table pick_addr-->
+    <id column="addr_id" jdbcType="BIGINT" property="addrId" />
+    <result column="addr_name" jdbcType="VARCHAR" property="addrName" />
+    <result column="addr" jdbcType="VARCHAR" property="addr" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="province_id" jdbcType="BIGINT" property="provinceId" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city_id" jdbcType="BIGINT" property="cityId" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="area_id" jdbcType="BIGINT" property="areaId" />
+    <result column="area" jdbcType="VARCHAR" property="area" />
+    <result column="shop_id" jdbcType="BIGINT" property="shopId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    addr_id, addr_name, addr, mobile, province_id, province, city_id, city, area_id, 
+    area, shop_id
+  </sql>
+</mapper>

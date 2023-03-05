@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pn.dao.CategoryMapper">
+  <resultMap id="BaseResultMap" type="com.pn.entily.Category">
+    <!--@mbg.generated-->
+    <!--@Table category-->
+    <id column="category_id" jdbcType="BIGINT" property="categoryId" />
+    <result column="shop_id" jdbcType="BIGINT" property="shopId" />
+    <result column="parent_id" jdbcType="BIGINT" property="parentId" />
+    <result column="category_name" jdbcType="VARCHAR" property="categoryName" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
+    <result column="pic" jdbcType="VARCHAR" property="pic" />
+    <result column="seq" jdbcType="INTEGER" property="seq" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="rec_time" jdbcType="TIMESTAMP" property="recTime" />
+    <result column="grade" jdbcType="INTEGER" property="grade" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    category_id, shop_id, parent_id, category_name, icon, pic, seq, `status`, rec_time, 
+    grade, update_time
+  </sql>
+</mapper>
